@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img alt="Vue logo" src="../src/assets/title-image.svg" />
     <h1>VueJs Currency Exchange App M291</h1>
     <div class="container">
       <div class="container-one">
@@ -194,81 +194,7 @@ export default {
 </script>
 
 <style>
-html {
-  background: #f4f4f4;
-}
-#app {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  /* justify-content: center; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  width: 100%;
-  height: 100%;
-  /* background: #f4f4f4f4; */
-  /* border:1px solid red */
-}
-h1 {
-  color: #5fbaa7;
-  font-weight: 900;
-}
 
-img {
-  width: 150px;
-}
 
-.container {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
-.container-two {
-  display: flex;
-  /* border: 1px solid black; */
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  justify-content: space-evenly;
-}
-
-.container-two button {
-  padding: 5px;
-  font-size: 18px;
-  background: #5fbaa7;
-  color: #fff;
-  width: 30%;
-  height: 10%;
-  border: none;
-  outline: none;
-}
-
-select {
-  padding: 5px;
-  /* width: 30%; */
-  margin: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  outline: none;
-}
-
-input {
-  padding: 5px;
-  font-size: 18px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  outline: none;
-}
-
-#lastlyUpdated{
-  font-weight: 500;
-}
-
-#baseValue {
-  font-weight: 500;
-}
 </style>
