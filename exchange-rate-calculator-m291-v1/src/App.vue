@@ -176,13 +176,13 @@ export default {
 					output: this.amountTwo,
 				}
 				console.log(inputObject, outputObject);
-				const fs = require('fs-extra/lib/fs/');
-				fs.writeJson('./log.json', inputObject, (error) =>{
-					if (error) throw error
-				})
+				const fes = require('fs-extra');
+				// fs.writeJson('./log.json', inputObject, (error) =>{
+				// 	if (error) throw error
+				// })
 				}
 			else{
-				console.log("No input")
+				console.log("No Input")
 			}
 
 		},
@@ -215,9 +215,7 @@ html
 	height: 100% 
 
 .logo	
-	.scale-up-center 
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
-	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+
 
 h1 
 	color: #5fbaa7 
