@@ -175,8 +175,9 @@ export default {
 					currency: this.currency_two,
 					output: this.amountTwo,
 				}
+				
 				console.log(inputObject, outputObject);
-				const fes = require('fs-extra');
+				// const fes = require('fs-extra');
 				// fs.writeJson('./log.json', inputObject, (error) =>{
 				// 	if (error) throw error
 				// })
