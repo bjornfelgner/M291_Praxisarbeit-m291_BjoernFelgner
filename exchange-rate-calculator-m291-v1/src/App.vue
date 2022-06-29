@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<img class="logo" alt="sbw logo" src="../src/assets/title-image.svg" />
+		<a href="https://www.sbw-media.ch"><img class="logo" alt="sbw logo" src="../src/assets/title-image.svg" /></a>
 		<h1>VueJs Currency Exchange App M291</h1>
 		<div class="container">
 			<div class="container-one">
@@ -123,7 +123,7 @@
 				<input type="number" id="amount-two" placeholder="0" v-model="amountTwo" disabled />
 			</div>
 			<div class="container-four">
-				<h4 id="lastlyUpdated">Lastly Updated: {{ data.time_last_update_utc }}</h4>
+				<h4 id="lastlyUpdated">Lastly Updated:{{ data.time_last_update_utc }}</h4>
 			</div>
 		</div>
 	</div>
@@ -149,11 +149,12 @@ export default {
 		};
 	},
 
+	
 	methods: {
 		
 		calculateResults() {
 			fetch(
-				`https://v6.exchangerate-api.com/v6/e3a321e9c8244d7ae9567db3/latest/${this.currency_one
+				`https://v6.exchangerate-api.com/v6/c1c642b5afcd67c6b84086fe/latest/${this.currency_one
 				}`
 			)
 				.then((res) => res.json())	
@@ -203,8 +204,11 @@ export default {
 </script>
 
 <style lang="sass">
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap')
+
 html 
-	background: #f4f4f4 
+	background: #FFFFFF
 #app
 	margin-top: 50px
 	display: flex 
@@ -217,9 +221,9 @@ html
 
 .logo	
 
-
 h1 
-	color: #5fbaa7 
+	font-family: 'Oswald', Extra
+	color: #0d3b66
 	font-weight: 900 
 img 
 	width: 150px 
@@ -238,15 +242,18 @@ img
 	justify-content: center 
 	width: 50% 
 	justify-content: space-evenly 
-	button 
+button 
+		border-radius: 25px
 		padding: 5px 
 		font-size: 18px 
-		background: #5fbaa7 
+		background: #0D3B66
 		color: #fff 
 		width: 30% 
 		height: 10% 
 		border: none 
 		outline: none 
+		cursor: pointer
+		
 select 
 	padding: 5px 
 	margin: 5px 
