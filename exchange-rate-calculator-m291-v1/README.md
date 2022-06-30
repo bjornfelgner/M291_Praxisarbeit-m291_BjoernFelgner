@@ -4,7 +4,7 @@
 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/97659996/176668581-c71a7c33-919e-4d3d-ac03-7427ea0e4d41.png">
 
-#### Eingabe in Formular funktioniert Problemlos. Die verschiedenen Währungen können alle aus dem Drop down auf der linken Seite des Formulars problemlos ausgewählt werden. Als Beispiel rechnete ich 1 US Dollar in Euro um. Die Validierung über die API funktionierte, und das Resultat wurde im unteren Formular Feld angezeigt.
+#### Eingabe in Formular funktioniert Problemlos. Die verschiedenen Währungen können aus dem Drop down auf der linken Seite des Formulars problemlos ausgewählt werden. Als Beispiel rechnete ich 1 US Dollar in Euro um. Die Validierung über die API funktionierte, und das Resultat wurde im unteren Formular Feld angezeigt.
 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/97659996/176670697-35be6ca9-dfb6-4edb-8d53-070282844ded.png">
 
