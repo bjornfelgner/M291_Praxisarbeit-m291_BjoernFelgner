@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<a href="https://www.sbw-media.ch"><img class="logo" alt="sbw logo" src="../src/assets/title-image.svg" /></a>
-		<h1>VueJs Currency Exchange App M291</h1>
+		<h1 class="h1">VueJs Currency Exchange App M291</h1>
 		<div class="container">
 			<div class="container-one">
 				<select name="first-currency" id="first-currency" @change="calculateResults()" v-model="currency_one">
@@ -124,17 +124,20 @@
 			</div>
 			<div class="container-four">
 				<h4 id="lastlyUpdated">Lastly Updated:{{ data.time_last_update_utc }}</h4>
+				<button class="download" @click="loggingResults">Herunterladen</button>
 			</div>
 		</div>
 	</div>
-	{{jsondata}}
 </template>
 
 <script setup>
 import jsonData from './log.json'
+
 </script>
 
 <script>
+
+
 export default {
 	components: {},
 	data() {
@@ -146,12 +149,13 @@ export default {
 			rate: "",
 			amountOne: 1,
 			amountTwo: 0,
+			inputObject: [this.currency_one, this.amountOne],
+			outputObject: [this.currency_two, this.amountTwo]
 		};
 	},
 
 	
 	methods: {
-		
 		calculateResults() {
 			fetch(
 				`https://v6.exchangerate-api.com/v6/c1c642b5afcd67c6b84086fe/latest/${this.currency_one
@@ -162,12 +166,12 @@ export default {
 					this.data = data;
 					this.rate = data.conversion_rates[this.currency_two];
 					this.amountTwo = this.amountOne * this.rate.toFixed(2);
-					this.loggingResults();
 				});
 				
 		},
 		loggingResults() {
-			if (this.amountOne && this.amountTwo != 0) {
+			this.calculateResults();
+			if (this.amountOne && this.amountTwo == 0) return;
 				const inputObject = {
 					currency: this.currency_one,
 					input: this.amountOne,
@@ -177,15 +181,9 @@ export default {
 					output: this.amountTwo,
 				}
 				
-				console.log(inputObject, outputObject);
-				// const fes = require('fs-extra');
-				// fs.writeJson('./log.json', inputObject, (error) =>{
-				// 	if (error) throw error
-				// })
-				}
-			else{
-				console.log("No Input")
-			}
+			const time = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
+			
+			this.download([inputObject, outputObject], time + '-currency-log-json.txt', 'text/plain');
 
 		},
 
@@ -195,11 +193,32 @@ export default {
 			this.currency_two = temp;
 			this.calculateResults();
 		},
+		download(content, fileName) {
+			var a = document.createElement("a");
+			var file = new Blob([JSON.stringify(content)], {type: 'application/json'});
+			a.href = URL.createObjectURL(file);
+			a.download = fileName;
+			a.click();
+		}
+
 	},
 
 	mounted() {
 		this.calculateResults();
+		if(localStorage.inputObject ) {
+			this.inputObject = localStorage.inputObject
+			console.log("saved in local storage")
+		}else {
+			this.outputObject = localStorage.outputObject
+		}
+		},
+	watch: {
+		Object_data(newinput, newoutput) {
+			localStorage.inputObject = newinput;
+			localStorage.outputObject = newoutput;
+		}
 	},
+
 };
 </script>
 
@@ -225,6 +244,30 @@ h1
 	font-family: 'Oswald', Extra
 	color: #0d3b66
 	font-weight: 900 
+	font-size: 30px
+	text-transform: uppercase
+	
+	background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)
+	background-size: auto auto
+	background-clip: border-box
+	background-size: 200% auto
+	color: #fff
+
+	background-clip: text
+
+	text-fill-color: transparent
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	animation: textclip 2s linear infinite
+
+	display: inline-block
+
+	@keyframes textclip 
+		to 
+			background-position: 200% center
+		
+	
+	
 img 
 	width: 150px 
 .container 

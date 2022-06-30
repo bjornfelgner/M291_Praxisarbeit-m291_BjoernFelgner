@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "file-system": "^1.2.2",
+    "fs": "^0.0.1-security",
     "fs-extra": "^10.1.0",
     "vue": "^3.2.13"
   },
