@@ -158,7 +158,7 @@ export default {
 	methods: {
 		calculateResults() {
 			fetch(
-				`https://v6.exchangerate-api.com/v6/c1c642b5afcd67c6b84086fe/latest/${this.currency_one
+				`https://v6.exchangerate-api.com/v6/b7227636d1ec56740d65ea2c/latest/${this.currency_one
 				}`
 			)
 				.then((res) => res.json())	
