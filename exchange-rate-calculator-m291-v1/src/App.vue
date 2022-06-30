@@ -223,9 +223,7 @@ export default {
 </script>
 
 <style lang="sass">
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap')
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto:ital,wght@0,100;0,400;0,500;1,100&display=swap')
 html 
 	background: #FFFFFF
 #app
@@ -285,13 +283,17 @@ img
 	justify-content: center 
 	width: 50% 
 	justify-content: space-evenly 
+.container-two > h4 
+	font-family: 'Roboto'
+	font-weight: 500
+.container-four > h4 
+	font-family: 'Roboto'
 button 
-		border-radius: 25px
-		padding: 5px 
+		border-radius: 15px
+		padding: 8px 
 		font-size: 18px 
 		background: #0D3B66
 		color: #fff 
-		width: 30% 
 		height: 10% 
 		border: none 
 		outline: none 
@@ -308,8 +310,15 @@ input
 	border: 1px solid rgba(0, 0, 0, 0.5) 
 	outline: none 
 #lastlyUpdated 
-	font-weight: 500 
+	font-weight: 100 
 #baseValue 
 	font-weight: 500 
+.donwload
+	width: 80%
+  
+
+
+  
+
 
 </style>
