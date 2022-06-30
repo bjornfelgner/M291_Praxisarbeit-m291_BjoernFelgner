@@ -235,9 +235,6 @@ html
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif 
 	width: 100% 
 	height: 100% 
-
-.logo	
-
 h1 
 	font-family: 'Oswald', Extra
 	color: #0d3b66
@@ -263,9 +260,6 @@ h1
 	@keyframes textclip 
 		to 
 			background-position: 200% center
-		
-	
-	
 img 
 	width: 150px 
 .container 
@@ -298,7 +292,6 @@ button
 		border: none 
 		outline: none 
 		cursor: pointer
-		
 select 
 	padding: 5px 
 	margin: 5px 
@@ -313,12 +306,6 @@ input
 	font-weight: 100 
 #baseValue 
 	font-weight: 500 
-.donwload
+.download
 	width: 80%
-  
-
-
-  
-
-
 </style>
