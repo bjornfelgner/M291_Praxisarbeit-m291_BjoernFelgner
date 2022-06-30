@@ -13,7 +13,7 @@
 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/97659996/176668581-c71a7c33-919e-4d3d-ac03-7427ea0e4d41.png">
 
-#### Eingabe in Formular funktioniert Problemlos. Die verschiedenen Währungen können aus dem Drop down auf der linken Seite des Formulars problemlos ausgewählt werden. Als Beispiel rechnete ich 1 US Dollar in Euro um. Die Validierung über die API funktionierte, und das Resultat wurde im unteren Formular Feld angezeigt.
+#### Eingabe in Formular funktioniert Problemlos. Die verschiedenen Währungen können aus dem Drop down auf der linken Seite des Formulars problemlos ausgewählt werden. Als Beispiel rechnete ich 1 US Dollar in Euro um. Die Validierung über die API funktionierte, und das Resultat wurde im unteren Formular Feld angezeigt. Ebenfalls kann man auf der rechten Seite des Eingabefeldes mithilfe von Pfeilen die Zahl grösser oder kleiner machen.
 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/97659996/176670697-35be6ca9-dfb6-4edb-8d53-070282844ded.png">
 
@@ -29,4 +29,4 @@
 
 ## 3.0 Fazit / Lessons Learned
 
-#### Dieses Modul bot einige herausforderungen für mich, da der Workflow sich mit VueJS meiner Meinung nach stark vom normalen Workflow unterscheidet, das Arbeiten in einem Dokument (App.vue) war neu für mich. Ich lernte einige Dinge von JavaScript dazu, insbesondere die Validierung von Daten aus einem Formular. Auch lernte ich besser mit dem auf CSS aufbauenden SASS umzugehen. 
+#### Dieses Modul bot einige herausforderungen für mich, da der Workflow sich mit VueJS meiner Meinung nach stark vom normalen Workflow unterscheidet, das Arbeiten in einem Dokument (App.vue) war neu für mich. Ich lernte einige Dinge von JavaScript dazu, insbesondere die Validierung von Daten aus einem Formular. Auch lernte ich besser mit dem auf CSS aufbauenden SASS umzugehen. Im grossen und ganzen muss ich sagen, dass mir das Modul extrem viel gebracht hat, ich hatte zwar oft Probleme, diese jedoch halfen mir bei der Problemlösung umso mehr und ich lernte einiges dazu.
