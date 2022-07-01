@@ -232,7 +232,6 @@ html
 	flex-direction: column 
 	align-content: center 
 	align-items: center 
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif 
 	width: 100% 
 	height: 100% 
 h1 
